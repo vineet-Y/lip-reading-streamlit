@@ -136,3 +136,12 @@ Add in-browser camera recording
 Support variable-length clips via dynamic padding
 
 Extend training to more diverse datasets
+
+## 9. Reference / Inspiration
+
+This project is inspired by the original LipNet research paper:
+
+LipNet: End-to-End Sentence-level Lipreading
+Yannis M. Assael, Brendan Shillingford, Shimon Whiteson, Nando de Freitas
+University of Oxford, Google DeepMind
+arXiv preprint: https://arxiv.org/abs/1611.01599
