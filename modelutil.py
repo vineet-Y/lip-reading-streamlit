@@ -1,7 +1,7 @@
 # modelutil.py
 import os
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import (Conv3D, LSTM, Dense, Dropout, Bidirectional,MaxPool3D, Activation, TimeDistributed, Flatten)
+from tensorflow.keras.layers import (Conv3D, LSTM, Dense, Dropout, Bidirectional, MaxPool3D, Activation, TimeDistributed, Flatten)
 
 def load_model() -> Sequential:
     model = Sequential()
@@ -28,13 +28,9 @@ def load_model() -> Sequential:
 
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
 
-    # Prefer the H5 weights file (works with modern Keras/TF)
-    h5_path = os.path.join("models-checkpoint", "lipnet.weights.h5")
-    if os.path.exists(h5_path):
-        model.load_weights(h5_path)
-    else:
-        # Fallback for your local old setup if needed
-        ckpt_path = os.path.join("models-checkpoint", "checkpoint")
-        model.load_weights(ckpt_path)
+    # Use the original TF checkpoint prefix
+    weights_path = os.path.join("models-checkpoint", "checkpoint")
+    model.load_weights(weights_path)
 
     return model
+
