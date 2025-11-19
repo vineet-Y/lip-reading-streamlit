@@ -1,6 +1,9 @@
 streamlit
-tensorflow==2.12.0
-opencv-python
+# TensorFlow CPU-only (smaller, works on Linux)
+tensorflow==2.15.0
+
+# OpenCV headless is safer on servers (no GUI deps)
+opencv-python-headless==4.10.0.84
 imageio
 numpy
 pillow
