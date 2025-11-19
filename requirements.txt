@@ -1,6 +1,6 @@
 streamlit
 # TensorFlow CPU-only (smaller, works on Linux)
-tensorflow
+tensorflow==2.12.0
 
 # OpenCV headless is safer on servers (no GUI deps)
 opencv-python-headless
