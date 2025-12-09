@@ -2,8 +2,10 @@
 
 This repository implements a deep learning-based lip-reading system that converts silent video footage of a speaker’s mouth into text. The model is inspired by the original LipNet architecture and processes raw video frames using spatiotemporal convolutions followed by recurrent sequence modeling. A Streamlit-based web interface is included to allow interactive testing through video uploads.
 
-Note: The streamlit app for the project can be accessed at https://lip-reading-app-6nydhdrzjea3c4xmpuueh5.streamlit.app/
-Please note that the model is designed to take videos of specific aspect ratios only, model working can be tested through sample videos available in the GitHub repo
+Note: The streamlit app for the project can be accessed at https://lip-reading-app-6nydhdrzjea3c4xmpuueh5.streamlit.app/ 
+Please note that the model is designed to take video input of specific aspect ratios only and expects the lips to be in specific region of the video, model working can be tested through 'sample videos' available in the GitHub repo.
+
+The primary goal of this project is to design a deep learning model that converts lip movement to text, not object detection. Further features will be added soon; stay tuned.
 
 ---
 
@@ -131,6 +133,8 @@ Not speaker-independent without additional training
 No audio is used; purely visual inference
 
 ## 8. Future Enhancements
+
+Lips Detection on face, the current program expects lips to be in a specific region of video.
 
 Convert checkpoint into a .keras or .h5 unified weight format
 
